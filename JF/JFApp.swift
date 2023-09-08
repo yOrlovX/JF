@@ -11,7 +11,9 @@ import SwiftUI
 struct JFApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          NavigationStack {
+            SplashView()
+          }
         }
     }
 }
