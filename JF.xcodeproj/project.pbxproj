@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9228F73D2AB0A7D4008D55C3 /* RecentPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */; };
 		9241A2692AAB027A00994D32 /* JFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241A2682AAB027A00994D32 /* JFApp.swift */; };
 		9241A26D2AAB027C00994D32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9241A26C2AAB027C00994D32 /* Assets.xcassets */; };
 		9241A2702AAB027C00994D32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9241A26F2AAB027C00994D32 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPostCell.swift; sourceTree = "<group>"; };
 		9241A2652AAB027A00994D32 /* JF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9241A2682AAB027A00994D32 /* JFApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFApp.swift; sourceTree = "<group>"; };
 		9241A26C2AAB027C00994D32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				92619B262AAB52D400C8F611 /* HomeView.swift */,
 				92619B292AAB53A300C8F611 /* SearchBarView.swift */,
 				92619B2B2AAB596D00C8F611 /* PopularJobCell.swift */,
+				9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				9241A27A2AAB036A00994D32 /* Colors.swift in Sources */,
 				9241A27E2AAB0B0C00994D32 /* SignInView.swift in Sources */,
 				9241A2692AAB027A00994D32 /* JFApp.swift in Sources */,
+				9228F73D2AB0A7D4008D55C3 /* RecentPostCell.swift in Sources */,
 				9241A2832AAB193600994D32 /* SignUpView.swift in Sources */,
 				92619B272AAB52D400C8F611 /* HomeView.swift in Sources */,
 				9241A2812AAB150600994D32 /* Modifiers.swift in Sources */,

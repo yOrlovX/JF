@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
   @State private var searchText: String = ""
-  let popularJobData = PopularJobCellData.mockPopularJobs
+  let popularJobMockData = PopularJobCellData.mockPopularJobs
+  let recentPostMockData = RecentPostCellData.mockRecentPost
   
   var body: some View {
     ZStack {
@@ -17,11 +18,21 @@ struct HomeView: View {
         .ignoresSafeArea()
       VStack {
         searchBarContainer
-        
+        Text("Recent Post")
         ScrollView(.horizontal) {
-          HStack {
-            ForEach(popularJobData) { datum in
+          HStack(spacing: 20) {
+            ForEach(popularJobMockData) { datum in
               PopularJobCell(data: datum)
+            }
+          }
+        }
+        Text("Recent Post")
+        ScrollView(.vertical) {
+          VStack(alignment: .leading, spacing: 20) {
+            Text("Recent Post")
+              .font(.system(size: 20, weight: .semibold))
+            ForEach(recentPostMockData) { datum in
+              RecentPostCell(data: datum)
             }
           }
         }

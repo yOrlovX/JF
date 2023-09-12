@@ -37,7 +37,7 @@ struct SearchBarView: View {
 //        .shadow(color: Colors.primaryGreen.opacity(0.15),
 //                radius: 10, x: 0, y: 0)
     )
-    .padding()
+//    .padding()
   }
 }
 
