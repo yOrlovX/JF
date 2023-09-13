@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
   @State private var searchText: String = ""
+  @State private var presentFilterSheet: Bool = false
   
   let popularJobMockData = PopularJobCellData.mockPopularJobs
   let recentPostMockData = RecentPostCellData.mockRecentPost
@@ -53,6 +54,9 @@ struct HomeView: View {
         .padding(.horizontal, 20)
       }
     }
+    .sheet(isPresented: $presentFilterSheet) {
+      SetFiltersView()
+    }
   }
 }
 
@@ -60,7 +64,7 @@ extension HomeView {
   private var searchBarContainer: some View {
     HStack(spacing: 15) {
       SearchBarView(searchText: $searchText)
-      Button(action: {}) {
+      Button(action: { presentFilterSheet = true }) {
         Image(systemName: "slider.horizontal.3")
           .foregroundColor(.white)
           .frame(width: 54, height: 54)
