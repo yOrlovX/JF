@@ -13,90 +13,39 @@ struct SetFiltersView: View {
   
   let subcategories = ["Logo Design", "Illustration", "Web Design", "Print Design", "Motion Graphics", "Packaging Design", "User Interface (UI) Design", "Typography", "Branding", "Poster Design"]
   
+  let locations = ["United States", "Canada", "United Kingdom", "Australia", "Germany", "France", "Japan"]
+  
+  let salarys = ["1k","2k","3k","4k","5k"]
+  
+  
   @State private var selectedProfession = "UI/UX Design"
   @State private var selectedSubcategory = "Logo Design"
+  @State private var selectedLocation = "Canada"
+  @State private var selectedSalary = "2k"
   
   var body: some View {
     ZStack {
       Colors.grayBackground
         .ignoresSafeArea()
-      
-      VStack {
+      VStack(spacing: 30) {
         Text("Set Filters")
           .font(.system(size: 20, weight: .semibold))
         
-        categorySection
-        subCategorySection
-      }
-    }
-  }
-}
-
-extension SetFiltersView {
-  private var categorySection: some View {
-    VStack(alignment: .leading) {
-      Text("Category")
-        .font(.system(size: 16, weight: .medium))
-      
-      ZStack {
-        // Custom picker label
-        HStack {
+        CustomPicker(title: "Category", selectedValue: $selectedProfession, options: professions) {
           Text("\(selectedProfession)")
-            .font(.system(size: 16, weight: .regular))
-            .foregroundColor(Colors.grayText)
-            .padding(20)
-          Spacer()
-          Image(systemName: "chevron.down")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 18, height: 18)
-            .padding(20)
         }
-        .frame(width: UIScreen.main.bounds.width - 40, height: 54)
-        .background(.white)
-        .cornerRadius(10)
-        // Invisible picker
-        Picker("", selection: $selectedProfession) {
-          ForEach(professions, id: \.self) { profession in
-            Text("\(profession)").tag(profession)
-          }
-        }
-        .pickerStyle(.menu)
-        .opacity(0.025)
-      }
-    }
-  }
-  
-  private var subCategorySection: some View {
-    VStack(alignment: .leading) {
-      Text("Sub Category")
-        .font(.system(size: 16, weight: .medium))
-      
-      ZStack {
-        // Custom picker label
-        HStack {
+        CustomPicker(title: "Sub Category", selectedValue: $selectedSubcategory, options: subcategories) {
           Text("\(selectedSubcategory)")
-            .font(.system(size: 16, weight: .regular))
-            .foregroundColor(Colors.grayText)
-            .padding(20)
-          Spacer()
-          Image(systemName: "chevron.down")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 18, height: 18)
-            .padding(20)
         }
-        .frame(width: UIScreen.main.bounds.width - 40, height: 54)
-        .background(.white)
-        .cornerRadius(10)
-        // Invisible picker
-        Picker("", selection: $selectedSubcategory) {
-          ForEach(subcategories, id: \.self) { subcategorie in
-            Text("\(subcategorie)").tag(subcategorie)
+        HStack {
+          CustomMiniPicker(title: "Location", selectedValue: $selectedLocation, options: locations) {
+            Text("\(selectedLocation)")
+          }
+          CustomMiniPicker(title: "Salary", selectedValue: $selectedSalary, options: salarys) {
+            Text("$\(selectedSalary)")
           }
         }
-        .pickerStyle(.menu)
-        .opacity(0.025)
+        .padding(.horizontal, 20)
       }
     }
   }

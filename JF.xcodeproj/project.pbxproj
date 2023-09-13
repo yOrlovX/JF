@@ -21,6 +21,8 @@
 		92619B272AAB52D400C8F611 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92619B262AAB52D400C8F611 /* HomeView.swift */; };
 		92619B2A2AAB53A300C8F611 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92619B292AAB53A300C8F611 /* SearchBarView.swift */; };
 		92619B2C2AAB596D00C8F611 /* PopularJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92619B2B2AAB596D00C8F611 /* PopularJobCell.swift */; };
+		92CE81752AB1EE2900C8EBDF /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE81742AB1EE2900C8EBDF /* CustomPicker.swift */; };
+		92CE81772AB1EE6500C8EBDF /* CustomMiniPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CE81762AB1EE6500C8EBDF /* CustomMiniPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		92619B262AAB52D400C8F611 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		92619B292AAB53A300C8F611 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		92619B2B2AAB596D00C8F611 /* PopularJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularJobCell.swift; sourceTree = "<group>"; };
+		92CE81742AB1EE2900C8EBDF /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		92CE81762AB1EE6500C8EBDF /* CustomMiniPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMiniPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				92619B2B2AAB596D00C8F611 /* PopularJobCell.swift */,
 				9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */,
 				92435B6A2AB1C19F001227DD /* SetFiltersView.swift */,
+				92CE81742AB1EE2900C8EBDF /* CustomPicker.swift */,
+				92CE81762AB1EE6500C8EBDF /* CustomMiniPicker.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -226,7 +232,9 @@
 				9241A2832AAB193600994D32 /* SignUpView.swift in Sources */,
 				92619B272AAB52D400C8F611 /* HomeView.swift in Sources */,
 				9241A2812AAB150600994D32 /* Modifiers.swift in Sources */,
+				92CE81772AB1EE6500C8EBDF /* CustomMiniPicker.swift in Sources */,
 				92619B2C2AAB596D00C8F611 /* PopularJobCell.swift in Sources */,
+				92CE81752AB1EE2900C8EBDF /* CustomPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
