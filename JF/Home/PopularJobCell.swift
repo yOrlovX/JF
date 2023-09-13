@@ -9,12 +9,6 @@ import SwiftUI
 
 struct PopularJobCell: View {
   
-  //  let organizationName: String
-  //  let position: String
-  //  let salary: Int
-  //  let location: String
-  //  let isFavorite: Bool
-  //  let image: String
   let data: PopularJobCellData
   
   var body: some View {
@@ -26,7 +20,7 @@ struct PopularJobCell: View {
             .scaledToFit()
             .frame(width: 40, height: 40)
             .cornerRadius(10)
-          
+            .padding(.top, 15)
           Text(data.organizationName)
             .font(.system(size: 12, weight: .regular))
             .foregroundColor(Colors.grayText)
@@ -52,9 +46,10 @@ struct PopularJobCell: View {
           .font(.system(size: 12, weight: .regular))
           .foregroundColor(Colors.grayText)
       }
-      .padding(.leading, 20)
+      .padding(.horizontal, 20)
+      .padding(.bottom, 15)
     }
-    .frame(maxWidth: 260, maxHeight: 160)
+    .frame(maxWidth: .infinity, maxHeight: 160)
     .background(.white)
     .cornerRadius(20)
   }

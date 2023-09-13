@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
   @State private var searchText: String = ""
+  
   let popularJobMockData = PopularJobCellData.mockPopularJobs
   let recentPostMockData = RecentPostCellData.mockRecentPost
   
@@ -16,28 +17,41 @@ struct HomeView: View {
     ZStack {
       Colors.grayBackground
         .ignoresSafeArea()
-      VStack {
-        searchBarContainer
-        Text("Recent Post")
-        ScrollView(.horizontal) {
-          HStack(spacing: 20) {
-            ForEach(popularJobMockData) { datum in
-              PopularJobCell(data: datum)
+      ScrollView {
+        VStack(spacing: 30) {
+          searchBarContainer
+          HStack {
+            Text("Popular Job")
+              .font(.system(size: 20, weight: .semibold))
+            Spacer()
+            Text("Show All")
+              .font(.system(size: 12, weight: .regular))
+              .foregroundColor(Colors.grayText)
+          }
+          ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 20) {
+              ForEach(popularJobMockData) { datum in
+                PopularJobCell(data: datum)
+              }
             }
           }
-        }
-        Text("Recent Post")
-        ScrollView(.vertical) {
-          VStack(alignment: .leading, spacing: 20) {
+          HStack {
             Text("Recent Post")
               .font(.system(size: 20, weight: .semibold))
+            Spacer()
+            Text("Show All")
+              .font(.system(size: 12, weight: .regular))
+              .foregroundColor(Colors.grayText)
+          }
+          VStack(alignment: .leading, spacing: 20) {
             ForEach(recentPostMockData) { datum in
               RecentPostCell(data: datum)
             }
           }
+          
         }
+        .padding(.horizontal, 20)
       }
-      .padding(.horizontal, 20)
     }
   }
 }
