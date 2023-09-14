@@ -17,11 +17,14 @@ struct SetFiltersView: View {
   
   let salarys = ["1k","2k","3k","4k","5k"]
   
+  let jobTypes = ["Full time","Part Time","Contract","Freelance","Remote"]
+  
   
   @State private var selectedProfession = "UI/UX Design"
   @State private var selectedSubcategory = "Logo Design"
   @State private var selectedLocation = "Canada"
   @State private var selectedSalary = "2k"
+  @State private var selectedJobType = "Part Time"
   
   var body: some View {
     ZStack {
@@ -46,6 +49,13 @@ struct SetFiltersView: View {
           }
         }
         .padding(.horizontal, 20)
+        
+        CustomJobTypePicker()
+        
+        Button(action: {}) {
+          Text("Apply Filters")
+            .modifier(ButtonModifier())
+        }
       }
     }
   }

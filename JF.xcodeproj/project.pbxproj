@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921598C52AB23C52004DD10F /* CustomJobTypePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921598C42AB23C52004DD10F /* CustomJobTypePicker.swift */; };
 		9228F73D2AB0A7D4008D55C3 /* RecentPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */; };
 		9241A2692AAB027A00994D32 /* JFApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9241A2682AAB027A00994D32 /* JFApp.swift */; };
 		9241A26D2AAB027C00994D32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9241A26C2AAB027C00994D32 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921598C42AB23C52004DD10F /* CustomJobTypePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJobTypePicker.swift; sourceTree = "<group>"; };
 		9228F73C2AB0A7D4008D55C3 /* RecentPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPostCell.swift; sourceTree = "<group>"; };
 		9241A2652AAB027A00994D32 /* JF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9241A2682AAB027A00994D32 /* JFApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JFApp.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				92435B6A2AB1C19F001227DD /* SetFiltersView.swift */,
 				92CE81742AB1EE2900C8EBDF /* CustomPicker.swift */,
 				92CE81762AB1EE6500C8EBDF /* CustomMiniPicker.swift */,
+				921598C42AB23C52004DD10F /* CustomJobTypePicker.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				9241A2812AAB150600994D32 /* Modifiers.swift in Sources */,
 				92CE81772AB1EE6500C8EBDF /* CustomMiniPicker.swift in Sources */,
 				92619B2C2AAB596D00C8F611 /* PopularJobCell.swift in Sources */,
+				921598C52AB23C52004DD10F /* CustomJobTypePicker.swift in Sources */,
 				92CE81752AB1EE2900C8EBDF /* CustomPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
