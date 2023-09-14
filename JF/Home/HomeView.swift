@@ -54,8 +54,8 @@ struct HomeView: View {
         .padding(.horizontal, 20)
       }
     }
-    .sheet(isPresented: $presentFilterSheet) {
-      SetFiltersView()
+    .sheet(isPresented: $presentFilterSheet, onDismiss: {}) {
+      SetFiltersView(presentFilterSheet: $presentFilterSheet)
     }
   }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SetFiltersView: View {
   
+  @Binding var presentFilterSheet: Bool
+  
   let professions = ["UI/UX Design", "Software Developer", "Data Scientist", "Doctor", "Teacher", "Lawyer", "Chef", "Graphic Designer", "Marketing Manager", "Accountant"]
   
   let subcategories = ["Logo Design", "Illustration", "Web Design", "Print Design", "Motion Graphics", "Packaging Design", "User Interface (UI) Design", "Typography", "Branding", "Poster Design"]
@@ -52,7 +54,7 @@ struct SetFiltersView: View {
         
         CustomJobTypePicker()
         
-        Button(action: {}) {
+        Button(action: { self.presentFilterSheet = false }) {
           Text("Apply Filters")
             .modifier(ButtonModifier())
         }
@@ -63,6 +65,6 @@ struct SetFiltersView: View {
 
 struct SetFiltersView_Previews: PreviewProvider {
   static var previews: some View {
-    SetFiltersView()
+    SetFiltersView(presentFilterSheet: .constant(false))
   }
 }
